@@ -114,8 +114,12 @@ function add_product() {
 
 // }
 
-function closeit(){
-    $(".error").hide()
+function closeit() {
+  $(".error").hide();
+}
+function change(){
+  $(".error").hide();
+  $(".success").hide();
 }
 
 function check_input() {
@@ -128,8 +132,7 @@ function check_input() {
       $(".error").html(
         `SKu field is empty<a onClick=closeit() href="#" class="close">X</a>`
       );
-    }
-    else
+    } else
       $(".error").html(
         `SKU field should be an integer<a onClick=closeit() href="#" class="close">X</a>`
       );
@@ -146,7 +149,7 @@ function check_input() {
       );
     else
       $(".error").html(
-        `Name field is empty<a onClick=closeit() href="#" class="close">X</a>`
+        `Name field should be string<a onClick=closeit() href="#" class="close">X</a>`
       );
     $("#product_name").css("border", "2px solid red");
     return false;
